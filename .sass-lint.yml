@@ -1,0 +1,14 @@
+files:
+  include: 'app/styles/**/*.s+(a|c)ss'
+  ignore:
+  - 'node_modules/**'
+  - 'app/styles/global/*.s+(a|c)ss'
+resolvers:
+  property-sort-order: 1
+  attribute-quotes: 1
+  empty-line-between-blocks: 1
+  url-quotes: 1
+  space-after-colon: 1
+  space-after-bang: 1
+options:
+  optOut: false

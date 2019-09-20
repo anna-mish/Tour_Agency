@@ -1,0 +1,7 @@
+# OS generated files #
+######################
+.sass-cache/*
+/node_modules/*
+/.idea
+/.vscode
+/build

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: $font-main;
+    font-size: $fs;
+    color: $main;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px 0;
+    // background-color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+    color: $main;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+input {
+    outline: none;
+}
+ul {
+    list-style-type: none;
+}
+// a:hover,
+// a:focus {
+//     text-decoration: none;
+// }
+
+// .btn:hover {
+//     opacity: 0.8;
+// }
