@@ -1,9 +1,11 @@
-@import 'global/reset';
-@import 'global/variаble';
-@import 'global/fonts';
-@import 'global/mixin';
-@import 'global/breakpoints';
-@import 'global/global-style-site';
-@import 'global/icons';
+@import "global/reset";
+@import "global/variаble";
+@import "global/fonts";
+@import "global/mixin";
+@import "global/breakpoints";
+@import "global/global-style-site";
+@import "global/icons";
+@import "global/swiper";
 
-@import 'components/header';
+@import "components/header";
+@import "components/swiper-slider";

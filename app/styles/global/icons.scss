@@ -1,31 +1,31 @@
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    @font-face {
-        font-family: 'Flaticon';
-        src: url('../fonts/Flaticon.svg#Flaticon') format('svg');
-    }
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
 }
 
-[class^='flaticon-']:before,
-[class*=' flaticon-']:before,
-[class^='flaticon-']:after,
-[class*=' flaticon-']:after {
-    font-family: Flaticon;
-    font-size: 20px;
-    font-style: normal;
-    margin-right: 5px;
-    color: $contact-link;
-    opacity: 0.8;
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-right: 5px;
+  color: $contact-link;
+  opacity: 0.8;
 }
 
 .flaticon-facebook:before {
-    content: '\f100';
+  content: "\f100";
 }
 .flaticon-instagram:before {
-    content: '\f101';
+  content: "\f101";
 }
 .flaticon-telephone:before {
-    content: '\f102';
+  content: "\f102";
 }
 .flaticon-placeholder:before {
-    content: '\f103';
+  content: "\f103";
 }

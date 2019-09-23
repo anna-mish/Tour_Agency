@@ -1,30 +1,12 @@
-import $ from './libs/jquery'; 
+import $ from 'jquery';
 import Swiper from 'swiper';
 
-$( document ).ready(function() { 
-  var swiper = new Swiper('.swiper-container', {
+$( document ).ready(function() {
+  var mainSwiper = new Swiper('.swiper-container', {
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination', 
+      clickable: true 
     },
+    // slidesPerView: 2
   });
 });
-
-// $('.swiper-object .swiper-container').each(function(index, value) {
- 
-//   var mySwiper = new Swiper(value, {
-//     autoplay: {
-//       delay: 5000,
-//     },
-//     navigation: {
-//       nextEl: value.nextElementSibling.nextElementSibling,
-//       prevEl: value.nextElementSibling,
-//     },
-//     pagination: {
-//       el: value.nextElementSibling.nextElementSibling.nextElementSibling,
-//       clickable: true,
-//     },
-//     slidesPerView: 'auto',
-//   });
-
-// });
-
