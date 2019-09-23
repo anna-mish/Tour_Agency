@@ -1,0 +1,104 @@
+.tabs-slider {
+    padding: 70px 0;
+    position: relative;
+    top: 613px;
+    #content {
+        margin: 0 auto;
+        padding: 0 20px;
+        width: 87%;
+    }
+
+    #tabs {
+        display: flex;
+        font-family: $font_bd;
+        font-size: $fs-md;
+        margin-bottom: 70px;
+        li {
+            padding-right: 32px;
+            a:hover {
+                color: $bg-link;
+            }
+        }
+    }
+
+    .swiper-object {
+        position: relative;
+    }
+
+    .tour {
+        background-color: $bg-tabs;
+        border: 1px solid $main;
+        border-radius: 7px;
+        display: flex;
+        height: 202px;
+        justify-content: space-around;
+        padding: 15px;
+        position: relative;
+        // width: 519px;
+        &-name {
+            font-family: $font_bd;
+            font-size: $tour-title;
+            line-height: 1.5;
+        }
+
+        &-date {
+            color: $description;
+            font-family: $font_main;
+            padding: 10px 0;
+        }
+
+        &-conditions {
+            border-top: 1px solid rgba(106, 106, 106, 0.2);
+            color: $description;
+            font-family: $font_main;
+            padding: 20px 0;
+        }
+
+        &-price {
+            font-family: $font_bd;
+            font-size: $fs-md;
+            padding: 15px 0;
+            sup {
+                color: $description;
+                font-size: $fs-sm;
+            }
+        }
+
+        &-btn {
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .description-tour {
+        margin-left: 15px;
+    }
+
+    .next,
+    .prev {
+        // display: block;
+        cursor: pointer;
+        height: 20px;
+        outline: none;
+        position: absolute;
+        top: 100px;
+        width: 20px;
+    }
+
+    .prev {
+        background: url('../images/arrow-tabs.png') center no-repeat;
+        left: -60px;
+    }
+
+    .next {
+        background: url('../images/arrow-tabs.png') center no-repeat;
+        right: -60px;
+        transform: rotate(180deg);
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: transparent;
+}

@@ -1,123 +1,123 @@
 .header {
-  position: relative;
-  z-index: 2;
-  //background: $header-bg;
-  //min-height: 734px;
-  // @include small {
-  //     height: 400px;
-  // }
-
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+    //background: $header-bg;
+    //min-height: 734px;
     // @include small {
-    //     align-items: center;
-    //     justify-content: center;
-    //     flex-direction: column;
     //     height: 400px;
     // }
 
-    // .logo {
-    //     @include small {
-    //         padding-bottom: 20px;
-    //     }
-    // }
-
-    .contacts {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .item-adress {
-      color: $contact-link;
-      opacity: 0.8;
-      padding-left: 40px;
-    }
-
-    .soc {
-      margin-left: 60px;
-      .item-soc {
-        padding-left: 20px;
-      }
-    }
-
-    // .contacts a:hover {
-    //     color: $secondary;
-    // }
-
-    .nav {
-      background-color: $bg-link;
-      // justify-content: space-evenly;
-      border-radius: 10px;
-      display: flex;
-      font-size: $subtitle;
-      height: 44px;
-      margin-top: 20px;
-      // @include small {
-      //     display: none;
-      // }
-
-      &__item {
-        padding: 0 22px;
-        position: relative;
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
         // @include small {
-        //     display: none;
+        //     align-items: center;
+        //     justify-content: center;
+        //     flex-direction: column;
+        //     height: 400px;
         // }
-      }
 
-      &__link {
-        display: block;
-        font-family: $font_bd;
-        padding: 13px 0;
-        position: relative;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+        // .logo {
+        //     @include small {
+        //         padding-bottom: 20px;
+        //     }
+        // }
 
-      .dropdown {
-        padding-right: 26px;
-        position: relative;
-      }
-
-      .dropdown:after {
-        background: url("../images/down-arrow.png") center no-repeat;
-        content: "";
-        height: 8px;
-        position: absolute;
-        right: 5px;
-        top: 20px;
-        width: 16px;
-      }
-
-      .submenu {
-        background-color: $submenu;
-        display: block;
-        font-family: $font-main;
-        font-size: $fs;
-        left: -3px;
-        padding: 15px 27px;
-        position: absolute;
-        top: auto;
-        z-index: 10;
-        li {
-          display: block;
-          a {
-            color: $secondary;
-            display: block;
-            padding: 12px 0;
-          }
+        .contacts {
+            display: flex;
+            justify-content: flex-end;
         }
 
-        &-tour {
-          width: 195px;
+        .item-adress {
+            color: $contact-link;
+            opacity: 0.8;
+            padding-left: 40px;
         }
 
-        &-service {
-          width: 240px;
+        .soc {
+            margin-left: 60px;
+            .item-soc {
+                padding-left: 20px;
+            }
         }
-      }
+
+        // .contacts a:hover {
+        //     color: $secondary;
+        // }
+
+        .nav {
+            background-color: $bg-link;
+            // justify-content: space-evenly;
+            border-radius: 10px;
+            display: flex;
+            font-size: $subtitle;
+            height: 44px;
+            margin-top: 20px;
+            // @include small {
+            //     display: none;
+            // }
+
+            &__item {
+                padding: 0 22px;
+                position: relative;
+                // @include small {
+                //     display: none;
+                // }
+            }
+
+            &__link {
+                display: block;
+                font-family: $font_bd;
+                padding: 13px 0;
+                position: relative;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .dropdown {
+                padding-right: 26px;
+                position: relative;
+            }
+
+            .dropdown:after {
+                background: url('../images/down-arrow.png') center no-repeat;
+                content: '';
+                height: 8px;
+                position: absolute;
+                right: 5px;
+                top: 20px;
+                width: 16px;
+            }
+
+            .submenu {
+                background-color: $submenu;
+                display: block;
+                font-family: $font-main;
+                font-size: $fs;
+                left: -3px;
+                padding: 15px 27px;
+                position: absolute;
+                top: auto;
+                z-index: 10;
+                li {
+                    display: block;
+                    a {
+                        color: $secondary;
+                        display: block;
+                        padding: 12px 0;
+                    }
+                }
+
+                &-tour {
+                    width: 195px;
+                }
+
+                &-service {
+                    width: 240px;
+                }
+            }
+        }
     }
-  }
 }
