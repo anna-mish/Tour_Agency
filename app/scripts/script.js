@@ -10,13 +10,17 @@ $( document ).ready(function() {
     }, 
   });
 
-  var tabsSwiper = new Swiper('#tabs-slider', {
+  var tabsSwiperHot = new Swiper('#tabs-slider-hot', {
     // slidesPerView: 3,
     breakpoints: {
-      // when window width is >=  
-      767: {
+      320: {
         slidesPerView: 1,
         spaceBetween: 40
+      },
+      // when window width is >=  
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 30
       },
       // when window width is >=  
       1140: {
@@ -26,15 +30,50 @@ $( document ).ready(function() {
       // when window width is >=  
       1600: {
         slidesPerView: 3,
-        spaceBetween: 40
+        spaceBetween: 60
       }
     } ,
     centeredSlides: true,
-    // spaceBetween: 60,
+    spaceBetween: 60,
     loop: true, 
     navigation: {
-      nextEl: '.next',
-      prevEl: '.prev',
+      nextEl: '#hot-tours .next',
+      prevEl: '#hot-tours .prev',
+    },
+    
+  
+  });
+
+
+  var tabsSwiperPopular = new Swiper('#tabs-slider-popular', {
+    // slidesPerView: 3,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      // when window width is >=  
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is >=  
+      1140: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is >=  
+      1600: {
+        slidesPerView: 3,
+        spaceBetween: 60
+      }
+    } ,
+    centeredSlides: true,
+    spaceBetween: 60,
+    loop: true, 
+    navigation: {
+      nextEl: '#popular-tours .next',
+      prevEl: '#popular-tours .prev',
     },
     
   
@@ -62,15 +101,12 @@ const onPageLoaded = () => {
           $(LIST_ITEM).removeClass('current'); //Сброс ID
           $(this).parent().addClass('current'); // Активируем закладку
           $('#' + $(this).attr('title')).fadeIn(); // Выводим содержание текущей закладки
-      });
-
+     
+      }); 
       $(LIST_ITEM_FIRST).click();
   };
 
   initTabs('#content','#tabs');
-  // initTabs('#user-content','#user-tabs');
-
-
 };
 
 

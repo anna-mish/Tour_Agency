@@ -5,7 +5,7 @@
     #content {
         margin: 0 auto;
         padding: 0 20px;
-        width: 87%;
+        width: 93%;
     }
 
     #tabs {
@@ -15,8 +15,11 @@
         margin-bottom: 70px;
         li {
             padding-right: 32px;
-            a:hover {
-                color: $bg-link;
+            a {
+                color: $main;
+                &:hover {
+                    color: $bg-link;
+                }
             }
         }
     }
@@ -33,51 +36,66 @@
         height: 202px;
         justify-content: space-around;
         padding: 15px;
-        position: relative;
         // width: 519px;
+        &-description {
+            margin-left: 15px;
+            position: relative;
+        }
         &-name {
             font-family: $font_bd;
             font-size: $tour-title;
             line-height: 1.5;
         }
-
+    
         &-date {
             color: $description;
             font-family: $font_main;
             padding: 10px 0;
         }
-
+    
         &-conditions {
             border-top: 1px solid rgba(106, 106, 106, 0.2);
             color: $description;
             font-family: $font_main;
-            padding: 20px 0;
+            padding-top: 20px;
         }
-
+    
         &-price {
             font-family: $font_bd;
             font-size: $fs-md;
-            padding: 15px 0;
+            padding-top: 15px;
             sup {
                 color: $description;
                 font-size: $fs-sm;
+                }
+            }
+    
+        &-btn {
+            background-color: $bg-link;
+            border-radius: 50%;
+            bottom: 0;
+            height: 37px;
+            position: absolute;
+            right: 0;
+            width: 37px;
+            &:before {
+                background-color: transparent;
+                border-left: 2px solid $main;
+                border-top: 2px solid $main;
+                content: '';
+                display: block;
+                height: 8px;
+                left: 11px;
+                position: absolute;
+                top: 13px;
+                transform: rotate(135deg);
+                    width: 8px;
             }
         }
-
-        &-btn {
-            left: 0;
-            position: absolute;
-            top: 0;
-        }
-    }
-
-    .description-tour {
-        margin-left: 15px;
     }
 
     .next,
     .prev {
-        // display: block;
         cursor: pointer;
         height: 20px;
         outline: none;
@@ -88,12 +106,12 @@
 
     .prev {
         background: url('../images/arrow-tabs.png') center no-repeat;
-        left: -60px;
+        left: -40px;
     }
 
     .next {
         background: url('../images/arrow-tabs.png') center no-repeat;
-        right: -60px;
+        right: -40px;
         transform: rotate(180deg);
     }
 }
