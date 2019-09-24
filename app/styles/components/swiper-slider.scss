@@ -1,87 +1,117 @@
 .custom-swiper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 734px;
-
-  // &::after {
-  //   display: block;
-  //   content: "";
-  //   padding-bottom: 40%;
-  //   width: 100%;
-  // }
-
-  .swiper-container {
-    position: absolute;
+    height: 734px;
     left: 0;
-    right: 0;
+    position: absolute;
     top: 0;
-    bottom: 0;
-  }
-
-  .swiper-slide {
-    background: url("../images/bg-banner.png") center no-repeat/cover;
-    color: $secondary;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
     width: 100%;
-    position: relative;
-    overflow: hidden;
 
-    &__inner {
-      position: absolute;
-      bottom: 100px;
-      left: 0;
-      right: 0;
-      padding: 40px 0;
-      z-index: 2;
+    // &::after {
+    //   display: block;
+    //   content: "";
+    //   padding-bottom: 40%;
+    //   width: 100%;
+    // }
 
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
+    .swiper-container {
+        bottom: 0;
         left: 0;
+        position: absolute;
         right: 0;
         top: 0;
-        bottom: 0;
-        transform: translateX(-30%);
-        background-color: opacify($header-bg, 0);
-      }
     }
 
-    &__description {
-      position: relative;
-      z-index: 2;
+    .swiper-slide {
+        background: url('../images/bg-banner.png') center no-repeat/cover;
+        color: $secondary;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        overflow: hidden;
+        position: relative;
+        width: 100%; 
+
+        &__inner {
+            bottom: 130px;
+            left: 0;
+            padding: 65px 0 45px 0;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            @include medium {
+                left: 100px;
+                bottom: 60px;
+            }
+
+            &::before {
+                background-color: opacify($header-bg, 0);
+                bottom: 0;
+                content: '';
+                display: block;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateX(-19%);
+                @include medium {
+                    transform: translateX(-6%);
+                }
+             
+            }
+        }
+
+        &__description {
+            position: relative;
+            z-index: 2;
+            @include medium {
+                text-align: center;
+                left: -6%;
+            }
+            .slider-title {
+                font-family: $font-bd;
+                font-size: $fs-lg;
+                @include medium {
+                    font-size: $section-title;
+                }
+            }
+            .link-offer {
+                background-color: $bg-link;
+                font-size: $subtitle;
+                color: $main;
+                font-family: $font-main;
+                display: inline-block;
+                border-radius: 10px;
+                border: 0; 
+                padding: 15px 30px;
+                margin-top: 40px; 
+            }
+        }
     }
-  }
 
-  .swiper-pagination {
-    text-align: left;
-  }
+    // .swiper-pagination {
+    //     text-align: left; 
+    // }
 
-  .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    margin: 0 3px;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: $bg-link;
-  }
+    .swiper-pagination-bullet {
+        height: 12px;
+        margin: 0 3px;
+        width: 12px;
+    }
 
-  .custom-swiper-pagination {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 30px;
-  }
+    .swiper-pagination-bullet-active {
+        background-color: $bg-link;
+    }
 
-  .link-offer {
-    width: 180px;
-    height: 30px;
-    border-radius: 4px;
-    background-color: $bg-link;
-    margin: 20px 0;
-  }
+    .custom-swiper-pagination {
+        bottom: 30px;
+        left: 0;  
+        position: absolute; 
+        right: 0; 
+        @include medium {
+            left: 50%; 
+            // transform: translateX(-50%);
+            margin-left: -25px;
+        }
+    }
+
+    
 }
