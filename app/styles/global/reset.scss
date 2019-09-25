@@ -141,7 +141,6 @@ q {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
 
 sub,
 sup {
@@ -171,4 +170,5 @@ sub {
     /* Move the subscripted text down, but only
        half as far down as the superscript moved up */
     bottom: -0.25em;
+
 }

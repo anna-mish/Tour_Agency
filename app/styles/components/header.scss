@@ -26,19 +26,43 @@
 
         .contacts {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            // @include medium {
+            //     justify-content: space-between;
+            // }
         }
 
         .item-adress {
             color: $contact-link;
             opacity: 0.8;
-            padding-left: 40px;
+            padding-left: 35px;
+            @include medium {
+                padding-left: 20px;
+            }
+        }
+
+        .adress {
+            display: flex;
+            //     @include medium {
+            //         //   display: flex;
+            //         //   flex-direction: row;
+            //     }
         }
 
         .soc {
-            margin-left: 60px;
+            display: flex;
+
+            // @include medium {
+            //     display: flex;
+            //     flex-direction: row;
+            //     padding-left: 10px;
+            // }
+
             .item-soc {
                 padding-left: 20px;
+                @include medium {
+                    padding-left: 10px;
+                }
             }
         }
 
@@ -48,15 +72,15 @@
 
         .nav {
             background-color: $bg-link;
-            // justify-content: space-evenly;
+
             border-radius: 10px;
             display: flex;
             font-size: $subtitle;
             height: 44px;
             margin-top: 20px;
-            // @include small {
-            //     display: none;
-            // }
+            @include medium {
+                justify-content: center;
+            }
 
             &__item {
                 padding: 0 22px;
@@ -64,6 +88,10 @@
                 // @include small {
                 //     display: none;
                 // }
+
+                @include medium {
+                    padding: 0 10px;
+                }
             }
 
             &__link {
@@ -101,6 +129,10 @@
                 position: absolute;
                 top: auto;
                 z-index: 10;
+                @include medium {
+                    padding: 13px 10px;
+                }
+
                 li {
                     display: block;
                     a {
@@ -112,6 +144,9 @@
 
                 &-tour {
                     width: 195px;
+                    @include medium {
+                        width: 165px;
+                    }
                 }
 
                 &-service {
