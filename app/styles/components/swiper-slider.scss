@@ -28,7 +28,7 @@
         font-size: 18px;
         overflow: hidden;
         position: relative;
-        width: 100%; 
+        width: 100%;
 
         &__inner {
             bottom: 130px;
@@ -38,8 +38,8 @@
             right: 0;
             z-index: 2;
             @include medium {
-                left: 100px;
                 bottom: 60px;
+                left: 100px;
             }
 
             &::before {
@@ -55,7 +55,6 @@
                 @include medium {
                     transform: translateX(-6%);
                 }
-             
             }
         }
 
@@ -63,9 +62,10 @@
             position: relative;
             z-index: 2;
             @include medium {
-                text-align: center;
                 left: -6%;
+                text-align: center;
             }
+
             .slider-title {
                 font-family: $font-bd;
                 font-size: $fs-lg;
@@ -73,22 +73,23 @@
                     font-size: $section-title;
                 }
             }
+
             .link-offer {
                 background-color: $bg-link;
-                font-size: $subtitle;
-                color: $main;
-                font-family: $font-main;
-                display: inline-block;
+                border: 0;
                 border-radius: 10px;
-                border: 0; 
+                color: $main;
+                display: inline-block;
+                font-family: $font-main;
+                font-size: $subtitle;
+                margin-top: 40px;
                 padding: 15px 30px;
-                margin-top: 40px; 
             }
         }
     }
 
     // .swiper-pagination {
-    //     text-align: left; 
+    //     text-align: left;
     // }
 
     .swiper-pagination-bullet {
@@ -103,15 +104,13 @@
 
     .custom-swiper-pagination {
         bottom: 30px;
-        left: 0;  
-        position: absolute; 
-        right: 0; 
+        left: 0;
+        position: absolute;
+        right: 0;
         @include medium {
-            left: 50%; 
+            left: 50%;
             // transform: translateX(-50%);
             margin-left: -25px;
         }
     }
-
-    
 }
