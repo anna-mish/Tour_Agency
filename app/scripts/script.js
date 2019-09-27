@@ -1,36 +1,73 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 
-$( document ).ready(function() {
+$( document ).ready(function() { 
+
+                                // gamburger menu
+  var link = $('#hamburger');
+  var menu = $('#mobile-navigation');
+  var overlay = $('#overlay');
+ 
+ function showNavigation() {
+   link.addClass('menu-link_active');
+   menu.addClass('menu_active');
+   overlay.show();
+   // or
+   // menu.fadeIn(800);
+ }
+
+ function hideNavigation() {
+   link.removeClass('menu-link_active');
+   menu.removeClass('menu_active');
+   overlay.hide();
+   // or
+   // menu.fadeOut(800);
+ }
+
+ link.click(function(){
+   if (menu.hasClass('menu_active')) {
+     hideNavigation();
+     return;
+   }
+   showNavigation();
+ });
+
+ overlay.click(function(){
+   hideNavigation();
+ });
+
+                           // Header slider
   var mainSwiper = new Swiper('#main-slider', {
     loop: true,
     pagination: {
       el: '#main-pagination', 
       clickable: true 
     }, 
-  });
+  }); 
+                          // слайдер в табе горящие туры
 
   var tabsSwiperHot = new Swiper('#tabs-slider-hot', {
     // slidesPerView: 3,
     breakpoints: {
+      // when window width is >= 
       320: {
         slidesPerView: 1,
         spaceBetween: 40
       },
       // when window width is >=  
-      767: {
+      1024: {
         slidesPerView: 2,
         spaceBetween: 30
       },
       // when window width is >=  
-      1140: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
+      // 1140: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 30
+      // },
       // when window width is >=  
       1600: {
         slidesPerView: 3,
-        spaceBetween: 60
+        spaceBetween: 40
       }
     } ,
     centeredSlides: true,
@@ -40,11 +77,10 @@ $( document ).ready(function() {
       nextEl: '#hot-tours .next',
       prevEl: '#hot-tours .prev',
     },
-    
-  
   });
 
-
+                   // слайдер в табе популярные туры
+    
   var tabsSwiperPopular = new Swiper('#tabs-slider-popular', {
     // slidesPerView: 3,
     breakpoints: {
@@ -53,19 +89,19 @@ $( document ).ready(function() {
         spaceBetween: 40
       },
       // when window width is >=  
-      767: {
+      1024: {
         slidesPerView: 2,
         spaceBetween: 30
       },
       // when window width is >=  
-      1140: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
+      // 1140: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 30
+      // },
       // when window width is >=  
       1600: {
         slidesPerView: 3,
-        spaceBetween: 60
+        spaceBetween: 40
       }
     } ,
     centeredSlides: true,
@@ -74,14 +110,11 @@ $( document ).ready(function() {
     navigation: {
       nextEl: '#popular-tours .next',
       prevEl: '#popular-tours .prev',
-    },
-    
-  
-  });
-  // $('.swiper-button-next, .swiper-button-prev').empty();
-  
+    }, 
+  });  
 });
 
+                         // Переключение табов
 
 const onPageLoaded = () => { 
   function initTabs(mainContainer, tabsContainer) {
@@ -101,11 +134,9 @@ const onPageLoaded = () => {
           $(LIST_ITEM).removeClass('current'); //Сброс ID
           $(this).parent().addClass('current'); // Активируем закладку
           $('#' + $(this).attr('title')).fadeIn(); // Выводим содержание текущей закладки
-     
       }); 
       $(LIST_ITEM_FIRST).click();
-  };
-
+  }; 
   initTabs('#content','#tabs');
 };
 

@@ -1,10 +1,10 @@
 .custom-swiper {
     height: 737px;
-
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
 
     // &::after {
     //   display: block;
@@ -36,20 +36,29 @@
         width: 100%;
 
         &__inner {
-
-
             bottom: 130px;
 
             left: 0;
             padding: 65px 0 45px 0;
             position: absolute;
             right: 0;
-            z-index: 2;
+            z-index: 4;
 
             @include medium {
                 bottom: 60px;
                 left: 100px;
-          }
+            }
+            @include small {
+                bottom: 100px;
+                left: 40px;
+                padding: 25px;
+                right: 40px;
+                text-align: center;
+                top: 333px;
+            }
+            // @include small {
+            //     display: none;
+            // }
 
             &::before {
                 background-color: opacify($header-bg, 0);
@@ -60,10 +69,14 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-
                 transform: translateX(-19%);
                 @include medium {
                     transform: translateX(-6%);
+                }
+                @include small {
+                    top: 100px;
+                    bottom: -15px;
+                    transform: translateX(0%);
                 }
             }
         }
@@ -76,6 +89,9 @@
                 left: -6%;
                 text-align: center;
             }
+            @include small {
+                top: 100px;
+            }
 
             .slider-title {
                 font-family: $font-bd;
@@ -83,12 +99,15 @@
                 @include medium {
                     font-size: $section-title;
                 }
-
+                @include small {
+                    font-size: $paragraph;
+                    line-height: 1.5;
+                    // padding-top: 0;
+                }
             }
 
             .link-offer {
                 background-color: $bg-link;
-
                 border: 0;
                 border-radius: 10px;
                 color: $main;
@@ -97,31 +116,29 @@
                 font-size: $subtitle;
                 margin-top: 40px;
                 padding: 15px 30px;
-
+                @include small {
+                    margin-top: 10px;
+                    padding: 10px 5px;
+                }
             }
         }
     }
-
-
-
 
     .swiper-pagination-bullet {
         background-color: $secondary;
         height: 14px;
         margin: 0 6px;
-        opacity: 0.5;
+        opacity: 0.8;
         width: 14px;
 
-    // .swiper-pagination {
-    //     text-align: left;
-    // }
-
- 
+        // .swiper-pagination {
+        //     text-align: left;
+        // }
     }
 
     .swiper-pagination-bullet-active {
         background-color: $bg-link;
-  }
+    }
 
     .custom-swiper-pagination {
         bottom: 30px;
@@ -131,9 +148,12 @@
 
         @include medium {
             left: 50%;
-            // transform: translateX(-50%);
             margin-left: -25px;
         }
-
+        @include small {
+            bottom: 60px;
+            left: 50%;
+            margin-left: -40px;
+        }
     }
 }

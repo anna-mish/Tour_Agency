@@ -11,25 +11,34 @@
         display: flex;
         justify-content: space-between;
         padding: 20px 0;
-        // @include small {
-        //     align-items: center;
-        //     justify-content: center;
-        //     flex-direction: column;
-        //     height: 400px;
-        // }
+        @include small {
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            // height: 400px;
+        }
 
-        // .logo {
-        //     @include small {
-        //         padding-bottom: 20px;
-        //     }
-        // }
+        .logo {
+            @include small {
+                padding-bottom: 20px;
+            }
+        }
+
+        .right-block {
+            @include small {
+                width: 100%;
+            }
+        }
 
         .contacts {
             display: flex;
             justify-content: space-between;
-            // @include medium {
-            //     justify-content: space-between;
-            // }
+            @include small {
+                align-items: center;
+                flex-direction: column;
+                // justify-content: center;
+                padding-bottom: 20px;
+            }
         }
 
         .item-adress {
@@ -39,24 +48,26 @@
             @include medium {
                 padding-left: 20px;
             }
+
+            @include small {
+                padding-bottom: 20px;
+            }
         }
 
         .adress {
             display: flex;
-            //     @include medium {
-            //         //   display: flex;
-            //         //   flex-direction: row;
-            //     }
+            @include small {
+                align-items: center;
+                flex-direction: column;
+                padding-bottom: 14px;
+            }
         }
 
         .soc {
             display: flex;
-
-            // @include medium {
-            //     display: flex;
-            //     flex-direction: row;
-            //     padding-left: 10px;
-            // }
+            @include small {
+                margin-right: 60px;
+            }
 
             .item-soc {
                 padding-left: 20px;
@@ -66,31 +77,44 @@
             }
         }
 
-        // .contacts a:hover {
-        //     color: $secondary;
-        // }
-
         .nav {
             background-color: $bg-link;
-
             border-radius: 10px;
             display: flex;
             font-size: $subtitle;
             height: 44px;
             margin-top: 20px;
+            position: relative;
+            z-index: 5;
             @include medium {
                 justify-content: center;
+            }
+
+            @include small {
+                flex-direction: column;
+                height: auto;
+                left: -120%;
+                margin: 0 auto;
+                max-width: 500px;
+                position: relative;
+                transition: all 0.4s ease-out;
             }
 
             &__item {
                 padding: 0 22px;
                 position: relative;
-                // @include small {
-                //     display: none;
-                // }
-
                 @include medium {
                     padding: 0 10px;
+                }
+
+                @include small {
+                    padding: 0 11px;
+                    position: relative;
+                    width: 100%;
+                }
+
+                &:hover > .submenu {
+                    display: block;
                 }
             }
 
@@ -99,7 +123,13 @@
                 font-family: $font_bd;
                 padding: 13px 0;
                 position: relative;
+                @include small {
+                    padding: 20px;
+                    text-align: left;
+                }
+
                 &:hover {
+                    border-radius: 0;
                     text-decoration: underline;
                 }
             }
@@ -107,51 +137,141 @@
             .dropdown {
                 padding-right: 26px;
                 position: relative;
+                &:after {
+                    background: url('../images/down-arrow.png') center no-repeat;
+                    content: '';
+                    height: 8px;
+                    position: absolute;
+                    right: 5px;
+                    top: 20px;
+                    width: 16px;
+                }
+            }
+        }
+
+        .submenu {
+            background-color: $submenu;
+            display: block;
+            font-family: $font-main;
+            font-size: $fs;
+            left: -3px;
+            padding: 15px 27px;
+            position: absolute;
+            top: auto;
+            z-index: 10;
+            @include medium {
+                padding: 13px 10px;
             }
 
-            .dropdown:after {
-                background: url('../images/down-arrow.png') center no-repeat;
-                content: '';
-                height: 8px;
-                position: absolute;
-                right: 5px;
+            @include small {
+                display: none;
+                left: 220px;
+                padding: 0 15px;
                 top: 20px;
-                width: 16px;
+                width: 240px;
+                // top: 5px;
             }
 
-            .submenu {
-                background-color: $submenu;
+            li {
                 display: block;
-                font-family: $font-main;
-                font-size: $fs;
-                left: -3px;
-                padding: 15px 27px;
-                position: absolute;
-                top: auto;
-                z-index: 10;
-                @include medium {
-                    padding: 13px 10px;
-                }
+                min-width: 141px;
 
-                li {
+                a {
+                    color: $secondary;
                     display: block;
-                    a {
-                        color: $secondary;
-                        display: block;
-                        padding: 12px 0;
+                    padding: 12px 0;
+                    @include small {
+                        text-align: center;
                     }
                 }
+            }
 
-                &-tour {
-                    width: 195px;
-                    @include medium {
-                        width: 165px;
+            // &-tour {
+            //     min-width: 195px;
+            //     // @include medium {
+            //     //     width: 165px;
+            //     // }
+            // }
+
+            &-service li {
+                min-width: 186px;
+            }
+        }
+
+        @include small {
+            .main-menu {
+                position: relative;
+            }
+
+            #overlay {
+                background-color: transparent;
+                bottom: 0;
+                cursor: pointer;
+                // display: none;
+                height: 100%;
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 100%;
+                z-index: 3;
+            }
+
+            .menu-link {
+                background-color: $header-bg;
+                border: 1px solid #333;
+                border-radius: 15%;
+                box-shadow: 1px 1px 20px 5px $bg-link;
+                display: block;
+                height: 40px;
+                position: absolute;
+                right: 263px;
+                top: -50px;
+                width: 40px;
+                z-index: 5;
+                span,
+                span:before,
+                span:after {
+                    background-color: $secondary;
+                    border-radius: 5px;
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    margin-left: -9px;
+                    margin-top: -1px;
+                    position: absolute;
+                    top: 50%;
+                    width: 18px;
+                }
+
+                span:before {
+                    content: '';
+                    margin-top: -7px;
+                    transition: all 0.2s;
+                }
+
+                span:after {
+                    content: '';
+                    margin-top: 5px;
+                    transition: all 0.2s;
+                }
+
+                &_active span {
+                    background-color: transparent;
+                    &:before {
+                        margin-top: 0;
+                        transform: rotate(135deg);
+                    }
+
+                    &:after {
+                        margin-top: 0;
+                        transform: rotate(-135deg);
                     }
                 }
+            }
 
-                &-service {
-                    width: 240px;
-                }
+            .menu_active .nav {
+                left: 0;
             }
         }
     }

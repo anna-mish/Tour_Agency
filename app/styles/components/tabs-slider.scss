@@ -2,6 +2,10 @@
     padding: 70px 0;
     position: relative;
     top: 613px;
+    @include small {
+        top: 80px;
+    }
+
     #content {
         margin: 0 auto;
         padding: 0 20px;
@@ -13,8 +17,18 @@
         font-family: $font_bd;
         font-size: $fs-md;
         margin-bottom: 70px;
+        @include small {
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
         li {
             padding-right: 32px;
+            @include small {
+                padding: 15px 0;
+            }
+
             a {
                 color: $main;
                 &:hover {
@@ -41,25 +55,26 @@
             margin-left: 15px;
             position: relative;
         }
+
         &-name {
             font-family: $font_bd;
             font-size: $tour-title;
             line-height: 1.5;
         }
-    
+
         &-date {
             color: $description;
             font-family: $font_main;
             padding: 10px 0;
         }
-    
+
         &-conditions {
             border-top: 1px solid rgba(106, 106, 106, 0.2);
             color: $description;
             font-family: $font_main;
             padding-top: 20px;
         }
-    
+
         &-price {
             font-family: $font_bd;
             font-size: $fs-md;
@@ -67,9 +82,9 @@
             sup {
                 color: $description;
                 font-size: $fs-sm;
-                }
             }
-    
+        }
+
         &-btn {
             background-color: $bg-link;
             border-radius: 50%;
@@ -89,7 +104,13 @@
                 position: absolute;
                 top: 13px;
                 transform: rotate(135deg);
-                    width: 8px;
+                width: 8px;
+            }
+        }
+
+        img {
+            @include small {
+                display: none;
             }
         }
     }
@@ -106,12 +127,12 @@
 
     .prev {
         background: url('../images/arrow-tabs.png') center no-repeat;
-        left: -40px;
+        left: -10px;
     }
 
     .next {
         background: url('../images/arrow-tabs.png') center no-repeat;
-        right: -40px;
+        right: -10px;
         transform: rotate(180deg);
     }
 }
