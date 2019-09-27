@@ -1,10 +1,56 @@
 .advantages {
     background-color: $bg-tabs;
     padding: 40px 0 75px 0;
+    position: relative;
+    top: 615px;
+    @include small {
+        top: 130px;
+    }
+
     h2 {
         font-family: $font_bd;
         font-size: $section-title;
         margin-bottom: 55px;
         text-transform: uppercase;
     }
+
+    .advantages-item {
+        display: flex;
+        justify-content: space-between;
+        @include small {
+           flex-direction: column;
+           align-items: center;
+        }
+        
+    .advantages-img {
+        width: 41%;
+        @include small {
+            width: 90%;
+         }
+        img {
+            width: 100%;
+        }
+    }
+
+    .advantages-text {
+        flex-basis: 53%;
+        font-size: $paragraph;
+        max-height: 184px;
+        line-height: 1.7;
+        margin-top: 70px;
+        padding-right: 50px;
+        overflow: auto;
+        @include medium {
+            margin-top: 20px;
+        }
+        @include small {
+            text-align: justify;
+            margin-top: 30px;
+            padding-right: 15px;
+            line-height: 1.2;
+        }
+        
+        }
+    }
+
 }
