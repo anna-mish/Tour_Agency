@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
+// import  from 'nice-select'
+import 'jquery-nice-select';
 
 $( document ).ready(function() { 
 
@@ -111,7 +113,12 @@ $( document ).ready(function() {
       nextEl: '#popular-tours .next',
       prevEl: '#popular-tours .prev',
     }, 
-  });  
+  }); 
+   
+       // form - dropdown 
+     
+        $('#country-select').niceSelect();
+    
 });
 
                          // Переключение табов
@@ -139,6 +146,8 @@ const onPageLoaded = () => {
   }; 
   initTabs('#content','#tabs');
 };
+
+     
 
 
 $(document).ready(onPageLoaded);
