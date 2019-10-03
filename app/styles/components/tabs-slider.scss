@@ -3,8 +3,8 @@
     position: relative;
     top: 613px;
     @include small {
-        top: 100px;
         padding: 30px 0;
+        top: 100px;
     }
 
     #content {

@@ -71,8 +71,8 @@
                     transform: translateX(-6%);
                 }
                 @include small {
-                    top: 100px;
                     bottom: -15px;
+                    top: 100px;
                     transform: translateX(0%);
                 }
             }
