@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 // import  from 'nice-select'
-import 'jquery-nice-select';
+// import 'jquery-nice-select';
 
 $( document ).ready(function() { 
 
@@ -117,7 +117,7 @@ $( document ).ready(function() {
    
        // form - dropdown 
      
-        $('#country-select').niceSelect();
+        // $('#country-select').niceSelect();
     
 });
 

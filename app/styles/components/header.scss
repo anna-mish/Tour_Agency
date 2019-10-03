@@ -15,7 +15,6 @@
             align-items: center;
             flex-direction: column;
             justify-content: flex-start;
-            // height: 400px;
         }
 
         .logo {
@@ -155,44 +154,35 @@
             font-family: $font-main;
             font-size: $fs;
             left: -3px;
-            padding: 15px 27px;
             position: absolute;
             top: auto;
             z-index: 10;
-            @include medium {
-                padding: 13px 10px;
-            }
 
             @include small {
                 display: none;
                 left: 220px;
-                padding: 0 15px;
                 top: 20px;
                 width: 240px;
-                // top: 5px;
             }
 
             li {
                 display: block;
-                min-width: 141px;
-
+                min-width: 141px; 
                 a {
                     color: $secondary;
                     display: block;
-                    padding: 12px 0;
+                    // padding: 12px 0;
+                    padding: 10px 15px;
+                    border: 1px solid transparent;
+                &:hover {
+                    border: 1px solid $contact-link;
+                }
                     @include small {
                         text-align: center;
                     }
                 }
             }
-
-            // &-tour {
-            //     min-width: 195px;
-            //     // @include medium {
-            //     //     width: 165px;
-            //     // }
-            // }
-
+          
             &-service li {
                 min-width: 186px;
             }
