@@ -167,22 +167,23 @@
 
             li {
                 display: block;
-                min-width: 141px; 
+                min-width: 141px;
                 a {
-                    color: $secondary;
-                    display: block;
-                    // padding: 12px 0;
-                    padding: 10px 15px;
                     border: 1px solid transparent;
-                &:hover {
-                    border: 1px solid $contact-link;
-                }
+                    color: $secondary;
+                    // padding: 12px 0;
+                    display: block;
+                    padding: 10px 15px;
+                    &:hover {
+                        border: 1px solid $contact-link;
+                    }
+
                     @include small {
                         text-align: center;
                     }
                 }
             }
-          
+
             &-service li {
                 min-width: 186px;
             }
