@@ -3,24 +3,17 @@
 //     font-size: $fs-md;
 //     color: $main;
 // }
-// @mixin link-yellow {
-//     font-family: $font, sans-serif;
-//     color: $design-border;
-//     font-size: $fs;
-//     font-weight: 400;
-//     border-bottom: 1px dotted $design;
-//     &:hover {
-//         color: $secondary;
-//         border-bottom: 1px dotted $secondary;
-//     }
-//     // border: 0;
-//     // outline: none;
-//     // cursor: pointer;
-// }
-
-// // @mixin span {
-// //     display: block;
-// //     font-family: $font_bd;
-// //     padding-top: 10px;
-// //     text-transform: uppercase;
-// // }
+@mixin yellow-button {
+    background-color: $bg-link;
+    border: 0;
+    border-radius: 10px;
+    color: $main;
+    display: inline-block;
+    font-family: $font-main;
+    font-size: $subtitle;
+    margin-top: 40px;
+    padding: 15px 30px;
+    &:hover {
+        box-shadow: 0 0 10px $secondary;
+    }
+}

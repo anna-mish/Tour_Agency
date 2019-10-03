@@ -1,51 +1,112 @@
 .form {
-    background: $header-bg url('../images/form-bg.png') center no-repeat;
+    background: url('../images/form-bg.png') center no-repeat/cover;
     padding: 45px 0;
-    height: 200px;
     position: relative;
     top: 600px;
+    @include small {
+        text-align: center;
+        top: 150px;
+    }
 
     h2 {
-        font-size: $section-title;
-        font-family: $font_bd;
         color: $secondary;
-        text-transform: uppercase;
+        font-family: $font_bd;
+        font-size: $section-title;
         margin-bottom: 35px;
-    }
-    form { 
-        padding: 40px;
-        background: rgba(0,0,0,.6);
-    }
-    input, select{
-        outline: none;
-        border: none;
-        background:transparent; 
-        color: $bg-tabs;
-        padding: 0 0 4px 10px;
-        margin-right: 30px;
-        border-bottom: 1px solid rgba(255,255,255,.4);
-        &[type="text"]{
-            width: 140px;
-        }
-        &[type="email"]{
-            width: 190px;
-        }
-        &[type="tel"]{
-            width: 150px;  
-        }
-        &[type="submit"]{
-            // width: 150px;  
-            margin-right: 0; 
-        }
-        &::placeholder { 
-            color: $bg-tabs; 
-        }
-        option {
-            color: $main; 
-        }
-    }
-    select {
-       margin: 0 5px 0 5px;
+        text-transform: uppercase;
     }
 
+    form {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        @include medium {
+            align-items: flex-end;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include small {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    input,
+    select {
+        // flex-basis: 25%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        color: $bg-tabs;
+        font-family: $font-main;
+        margin-right: 30px;
+        outline: none;
+        padding: 0 0 4px 10px;
+        @include small {
+            width: 80%;
+        }
+
+        &[type='text'] {
+            width: 14%;
+        }
+
+        &[type='email'] {
+            width: 18%;
+        }
+
+        &[type='tel'] {
+            width: 15%;
+        }
+
+        &::placeholder {
+            color: $bg-tabs;
+        }
+
+        option {
+            color: $main;
+        }
+
+        @include medium {
+            flex-basis: 25%;
+        }
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'] {
+        @include small {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            padding-left: 40px;
+            width: 80%;
+        }
+    }
+
+    select {
+        margin: 0 20px 0 10px;
+        width: 14%;
+        @include small {
+            margin: 0 auto;
+            padding-left: 40px;
+            width: 80%;
+        }
+    }
+
+    .btn-offer {
+        @include yellow-button;
+        margin-right: 0;
+        margin-top: 0;
+        @include medium {
+            margin-top: 30px;
+        }  
+
+        @include small { 
+            margin: 0 auto;
+            margin-top: 40px;
+            padding: 10px 5px;
+            font-size: $fs;
+            font-family: $font-bd;
+        }
+    }
 }
